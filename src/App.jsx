@@ -12,7 +12,7 @@ function App() {
   const [totalAmount, setTotalAmount] = useState(null)
 
   function getRate(){
-    axios.get(`https://api.metalpriceapi.com/v1/convert?api_key=5d4665a0dd6fdffc6a9ee772ba9710b1&from=USD&to=INR&amount=${amount}&date=2025-03-01`)
+    axios.get(`https://api.metalpriceapi.com/v1/convert?api_key${apiUrl}=5d4665a0dd6fdffc6a9ee772ba9710b1&from=USD&to=INR&amount=${amount}&date=2025-03-01`)
     .then((response) => {
       console.log(response.data.result)
       setLivePrice(response.data.result)
